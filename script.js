@@ -32,7 +32,7 @@ projects.forEach(project => {
             <div class="card-back">
                 <h3>${project.name}</h3>
                 <p><strong>Tech Stack Used:</strong> ${project.techStack}</p>
-                <p><strong>Project Overview: </strong>${project.description}</p>
+                <p><strong>Project Overview:</strong> ${project.description}</p>
                 <a href="${project.github}" target="_blank">GitHub</a>
                 <a href="${project.live}" target="_blank">Live Link</a>
             </div>
@@ -121,3 +121,33 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.4 });
 
 fadeSections.forEach(section => observer.observe(section));
+
+// ================= THEME & ACCENT TOGGLES =================
+const body = document.body;
+const themeToggleBtn = document.getElementById("themeToggle");
+const accentToggleBtn = document.getElementById("accentToggle");
+
+// accent colors to cycle through
+const accentColors = ["#00e0ff", "#00ff88", "#a970ff", "#ffb400"];
+let accentIndex = 0;
+
+function applyAccent() {
+    const color = accentColors[accentIndex];
+    document.documentElement.style.setProperty("--accent", color);
+}
+
+function toggleTheme() {
+    const current = body.getAttribute("data-theme");
+    const next = current === "dark" ? "light" : "dark";
+    body.setAttribute("data-theme", next);
+}
+
+themeToggleBtn.addEventListener("click", toggleTheme);
+
+accentToggleBtn.addEventListener("click", () => {
+    accentIndex = (accentIndex + 1) % accentColors.length;
+    applyAccent();
+});
+
+// initial accent
+applyAccent();
