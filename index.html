@@ -8,93 +8,100 @@
 </head>
 <body data-theme="dark">
 
-<!-- ================= NAVBAR ================= -->
-<nav class="navbar">
-    <div class="logo">Welcome to my Portfolio 😀</div>
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="logo"><span id="logoText">Welcome to my Portfolio 😀</span></div>
 
-    <div class="nav-controls">
-        <button id="themeToggle" class="nav-btn">Light / Dark</button>
-        <button id="accentToggle" class="nav-btn">Change Accent</button>
-    </div>
-
-    <ul class="nav-links">
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#interests">Interests</a></li>
-    </ul>
-</nav>
-
-<!-- ================= HERO ================= -->
-<header id="about" class="hero">
-    <div class="container hero-content">
-        <div class="hero-text">
-            <h1>Hello👋, I'm <span class="highlight">Baire Diaz</span></h1>
-            <p class="subtitle">FIU Computer Science Graduate • Software & IT Enthusiast</p>
-
-            <p class="about-paragraph">
-                I’m passionate about building reliable software systems, understanding technology end‑to‑end,
-                and contributing to secure, scalable, and well‑maintained applications.
-            </p>
-
-            <p class="about-paragraph">
-                My goal is to grow within a collaborative engineering team while continuously improving my
-                technical and problem‑solving skills.
-            </p>
-
-            <a href="#projects" class="cta-btn">View My Work</a>
+        <div class="nav-controls">
+            <button id="themeToggle" class="nav-btn">Light / Dark</button>
+            <button id="accentToggle" class="nav-btn">Change Accent</button>
         </div>
 
-        <div class="hero-image">
-            <img src="images/profile.jpg" alt="Baire Diaz">
+        <ul class="nav-links">
+            <li><a data-target="about">About Me</a></li> 
+            <li><a data-target="projects">Projects</a></li> 
+            <li><a data-target="skills">Skills</a></li> 
+            <li><a data-target="interests">Interests</a></li>
+        </ul>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <header id="about" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Hello👋, I'm <span class="highlight">Baire Diaz</span></h1>
+                <p class="subtitle">FIU Computer Science Graduate • Software & IT Enthusiast</p>
+
+                <p class="about-paragraph">
+                    I’m passionate about building reliable software systems, understanding technology end‑to‑end,
+                    and contributing to secure, scalable, and well‑maintained applications.
+                </p>
+
+                <p class="about-paragraph">
+                    My goal is to grow within a collaborative engineering team while continuously improving my
+                    technical and problem‑solving skills.
+                </p>
+
+                <a href="#projects" class="cta-btn">View My Work</a>
+            </div>
+
+            <div class="hero-image">
+                <a href="https://www.linkedin.com/in/baire-diaz" target="_blank">
+                <img src="images/profile.jpg" alt="Baire Diaz">
+                </a>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<!-- ================= PROJECTS ================= -->
-<section id="projects" class="section fade-section">
-    <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <div class="card-container" id="projectsContainer"></div>
-    </div>
-</section>
-
-<!-- ================= SKILLS ================= -->
-<section id="skills" class="section fade-section">
-    <div class="container">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-grid">
-            <div>Python</div>
-            <div>Java</div>
-            <div>C# (.NET)</div>
-            <div>C / C++</div>
-            <div>HTML / CSS / JavaScript</div>
-            <div>React</div>
-            <div>Rest API (FastAPI)</div>
-            <div>SQL / MySQL</div>
-            <div>Git / GitHub</div>
-            <div>Linux / Windows</div>
-            <div>AWS / Azure Basics</div>
-            <div>GenAI (ChatGPT, Copilot, Claude)</div>
-            <div>Problem Solving</div>
-            <div>Team Collaboration</div>
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="section fade-section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="card-container" id="projectsContainer"></div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- ================= INTERESTS ================= -->
-<section id="interests" class="section fade-section">
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="section fade-section">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div>Python</div>
+                <div>Java</div>
+                <div>C# (.NET)</div>
+                <div>C / C++</div>
+                <div>HTML / CSS / JavaScript</div>
+                <div>React</div>
+                <div>Rest API (FastAPI)</div>
+                <div>SQL / MySQL</div>
+                <div>Git / GitHub</div>
+                <div>Linux / Windows</div>
+                <div>AWS / Azure Basics</div>
+                <div>GenAI (ChatGPT, Copilot, Claude)</div>
+                <div>Problem Solving</div>
+                <div>Team Collaboration</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= INTERESTS ================= -->
+    <section id="interests" class="section fade-section">
     <div class="container">
         <h2 class="section-title">Personal Interests & Learning</h2>
-        <div class="card-container" id="interestsContainer"></div>
     </div>
-</section>
 
-<!-- ================= FOOTER ================= -->
-<footer>
-    <p>© 2026 Baire Diaz — Built with HTML, CSS & JavaScript</p>
-</footer>
+    <div id="interestsContainer"></div>
+    </section>
 
-<script src="script.js"></script>
+    <!-- Scroll Message -->
+    <div id="scrollMessage">Thanks so much for visiting my portfolio🙌</div>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>© 2026 Baire Diaz — Built with HTML, CSS & JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
