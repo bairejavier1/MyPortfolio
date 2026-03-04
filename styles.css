@@ -580,7 +580,7 @@ body[data-theme="light"] footer {
 
     /* Ensure sections are reachable with fixed navbar */
     section {
-        scroll-margin-top: 260px;
+        scroll-margin-top: 360px;
     }
 
     /* Cards */
@@ -633,7 +633,7 @@ body[data-theme="light"] footer {
 
     /* Ensure sections are reachable with fixed navbar */
     section {
-        scroll-margin-top: 280px;
+        scroll-margin-top: 400px;
     }
 
     /* Cards */
