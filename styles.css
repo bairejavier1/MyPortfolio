@@ -547,10 +547,10 @@ body[data-theme="light"] footer {
 
 /* Small tablets & large phones */
 @media (max-width: 768px) {
+
     /* Hero Section */
-    .hero {
-        padding-top: 140px; /* adjust for navbar + breathing room */
-    }
+    .hero { padding-top: 140px; }
+    #about { padding-top: 220px; }
 
     .hero-content {
         flex-direction: column;
@@ -564,10 +564,7 @@ body[data-theme="light"] footer {
     .about-paragraph { font-size: 15px; line-height: 1.5; }
     .cta-btn { padding: 10px 22px; font-size: 14px; }
 
-    .hero-image img {
-        width: 200px;
-        border-width: 3px;
-    }
+    .hero-image img { width: 200px; border-width: 3px; }
 
     /* Navbar */
     .navbar {
@@ -575,13 +572,18 @@ body[data-theme="light"] footer {
         padding: 10px 20px;
         gap: 8px;
     }
-    .nav-links { flex-direction: column; gap: 12px; }
+
+    .nav-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
     .nav-controls { flex-direction: row; flex-wrap: wrap; gap: 8px; }
 
-    /* Ensure sections are reachable with fixed navbar */
-    section {
-        scroll-margin-top: 360px;
-    }
+    /* Scroll offset */
+    section { scroll-margin-top: 300px; }
 
     /* Cards */
     .card-container,
@@ -610,20 +612,18 @@ body[data-theme="light"] footer {
 
     /* Fade Section */
     .fade-section {
-        transform: translateY(5px); /* minimal offset for quick fade */
+        transform: translateY(5px);
         opacity: 0;
         transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-    .fade-section.appear {
-        opacity: 1;
-        transform: translateY(0);
     }
 }
 
 /* Phones (small screens) */
 @media (max-width: 480px) {
-    /* Hero Section */
+
     .hero { padding-top: 160px; }
+    #about { padding-top: 260px; }
+
     .hero-text h1 { font-size: 26px; }
     .subtitle { font-size: 14px; }
     .about-paragraph { font-size: 13px; line-height: 1.6; }
@@ -631,10 +631,8 @@ body[data-theme="light"] footer {
 
     .hero-image img { width: 150px; }
 
-    /* Ensure sections are reachable with fixed navbar */
-    section {
-        scroll-margin-top: 400px;
-    }
+    /* Scroll offset */
+    section { scroll-margin-top: 340px; }
 
     /* Cards */
     .card-container,
@@ -643,27 +641,21 @@ body[data-theme="light"] footer {
         gap: 20px;
     }
 
-    .card-inner { height: 300px; }
     #interestsContainer .card img { height: 140px; }
 
     /* Skills Grid */
     .skills-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
-    .skills-grid div { font-size: 14px; padding: 8px 10px; }
 
     /* Scroll Message */
-    #scrollMessage { font-size: 18px; bottom: 50px; border-right: 1.5px solid var(--accent); }
+    #scrollMessage { font-size: 18px; bottom: 50px; }
 
     /* Footer */
     footer { font-size: 14px; padding: 15px; }
 
     /* Fade Section */
     .fade-section {
-        transform: translateY(3px); /* very small offset for fast fade */
+        transform: translateY(3px);
         opacity: 0;
         transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-    .fade-section.appear {
-        opacity: 1;
-        transform: translateY(0);
     }
 }
