@@ -122,7 +122,7 @@ const observer = new IntersectionObserver(
             }
         });
     },
-    { threshold: 0.25 }
+    { threshold: 0.2 }
 );
 
 fadeSections.forEach(section => observer.observe(section));
