@@ -335,6 +335,10 @@ body[data-theme="light"] #interests { background: var(--light-bg); }
     gap: 12px;
 }
 
+.card-back {
+    overflow-y: auto;
+}
+
 .card-back h3 {
     font-size: 35px;
     margin-bottom: 8px;
